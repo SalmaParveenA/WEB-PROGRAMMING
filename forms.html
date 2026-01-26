@@ -1,0 +1,132 @@
+<!doctype html>
+<html>
+  <head>
+    <title>FORM</title>
+    <style>
+      .label {
+        font-size: 20px;
+      }
+      .defi {
+        padding: 12px 15px;
+      }
+      .but {
+        display: flex;
+        justify-content: center;
+      }
+      #button {
+        border: 2px solid black;
+        margin: 20px;
+        padding: 10px 10px;
+        width: 150px;
+        border-radius: 30px;
+        font-weight: bolder;
+        font-size: large;
+        font-family: "Times New Roman", Times, serif;
+        background-color: rgb(229, 195, 195);
+      }
+    </style>
+  </head>
+  <body>
+    <form id="form">
+      <fieldset>
+        <legend>STUDENT REGISTARTION FORM</legend>
+        <table>
+          <tr class="row">
+            <td class="defi"><label class="label">ENTER NAME : </label></td>
+            <td class="defi">
+              <input type="text" style="font-size: larger" required />
+            </td>
+          </tr>
+          <tr class="row">
+            <td class="defi">
+              <label class="label">ENTER ROLL NUMBER : </label>
+            </td>
+            <td class="defi">
+              <input type="number" style="font-size: larger" required />
+            </td>
+          </tr>
+
+          <tr class="row">
+            <td class="defi"><label class="label">ENTER E-MAIL : </label></td>
+            <td class="defi">
+              <input type="email" style="font-size: larger" required />
+            </td>
+          </tr>
+          <tr>
+            <td class="defi">
+              <label class="label">ENTER DEPARTMENT : </label>
+            </td>
+            <td class="defi">
+              <input
+                type="radio"
+                name="course"
+                style="font-size: larger"
+                required
+              />COMPUTER SCIENCE ENGINEERING<br />
+              <input
+                type="radio"
+                name="course"
+                style="font-size: larger"
+                required
+              />MECHANICAL ENGINEERING<br />
+              <input
+                type="radio"
+                name="course"
+                style="font-size: larger"
+                required
+              />ELECTRICAL ENGINEERING
+            </td>
+          </tr>
+          <tr class="row">
+            <td class="defi"><label class="label">ENTER COURSE : </label></td>
+            <td class="defi">
+              <input
+                type="radio"
+                name="type"
+                style="font-size: larger"
+                required
+              />B.E<br />
+              <input
+                type="radio"
+                name="type"
+                style="font-size: larger"
+                required
+              />B.TECH<br />
+            </td>
+          </tr>
+
+          <tr class="row">
+            <td class="defi">
+              <label class="label">ENTER STUDENT PHONE-NUMBER : </label>
+            </td>
+            <td class="defi">
+              <input type="number" style="font-size: larger" required />
+            </td>
+          </tr>
+
+          <tr class="row">
+            <td class="defi">
+              <label class="label">ENTER PARENT PHONE-NUMBER : </label>
+            </td>
+            <td class="defi">
+              <input type="number" style="font-size: larger" required />
+            </td>
+          </tr>
+
+          <tr class="row">
+            <td class="defi">
+              <label class="label">ENTER ADDRESS : </label>
+            </td>
+            <td class="defi">
+              <textarea row="4" cols="40" style="font-size: larger"></textarea>
+            </td>
+          </tr>
+        </table>
+
+        <div class="but">
+          <button id="button">SUBMIT</button>
+        </div>
+      </fieldset>
+    </form>
+  </body>
+</html>
