@@ -1,0 +1,19 @@
+<!doctype html>
+<html>
+  <head>
+    <title>HTTP PROTOCALS</title>
+  </head>
+  <body>
+    <h1>HTTP PROTOCALS</h1>
+    <h1>in blank page</h1>
+    <span id="area"></span>
+    <script>
+      const query = window.location.search;
+      const parse = new URLSearchParams(query);
+      let name = parse.get("name");
+      let pass = parse.get("pass");
+      let box = document.getElementById("area");
+      box.innerText = "NAME: " + name + " Pass: " + pass;
+    </script>
+  </body>
+</html>
