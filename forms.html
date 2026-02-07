@@ -3,8 +3,13 @@
   <head>
     <title>FORM</title>
     <style>
+      #form
+      {
+        background-color:rgb(243, 218, 223);
+      }
       .label {
         font-size: 20px;
+        font-weight: bolder;
       }
       .defi {
         padding: 12px 15px;
@@ -12,6 +17,20 @@
       .but {
         display: flex;
         justify-content: center;
+      }
+      .input
+      {
+        font-size: medium;
+        font-family: &quot;Times New Roman&quot;, Times, serif;
+        padding: 10px;
+        width:200px;
+        border-radius: 10px;
+        border: 1px solid black;
+        background-color: rgb(232, 216, 194);
+        font-weight: bold;
+
+
+
       }
       #button {
         border: 2px solid black;
@@ -24,109 +43,162 @@
         font-family: "Times New Roman", Times, serif;
         background-color: rgb(229, 195, 195);
       }
+      h1{
+        text-align: center;
+      }
+      .container
+      {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
     </style>
   </head>
   <body>
+    <h1>WELCOME TO OUR PAGE</h1>
     <form id="form">
       <fieldset>
         <legend>STUDENT REGISTARTION FORM</legend>
-        <table>
-          <tr class="row">
-            <td class="defi"><label class="label">ENTER NAME : </label></td>
-            <td class="defi">
-              <input type="text" style="font-size: larger" required />
-            </td>
-          </tr>
-          <tr class="row">
-            <td class="defi">
-              <label class="label">ENTER ROLL NUMBER : </label>
-            </td>
-            <td class="defi">
-              <input type="number" style="font-size: larger" required />
-            </td>
-          </tr>
+        <div class="container">
+          <table>
+            <tr class="row">
+              <td class="defi"><label class="label">ENTER NAME : </label></td>
+              <td class="defi">
+                <input type="text" class="input" placeholder="enter name" />
+              </td>
+            </tr>
+            <tr class="row">
+              <td class="defi">
+                <label class="label">ENTER ROLL NUMBER : </label>
+              </td>
+              <td class="defi">
+                <input
+                  id="roll"
+                  type="number"
+                  class="input"
+                  placeholder="enter roll no"
+                  required
+                />
+              </td>
+            </tr>
 
-          <tr class="row">
-            <td class="defi"><label class="label">ENTER E-MAIL : </label></td>
-            <td class="defi">
-              <input type="email" style="font-size: larger" required />
-            </td>
-          </tr>
-          <tr>
-            <td class="defi">
-              <label class="label">ENTER DEPARTMENT : </label>
-            </td>
-            <td class="defi">
-              <input
-                type="radio"
-                name="course"
-                style="font-size: larger"
-                required
-              />COMPUTER SCIENCE ENGINEERING<br />
-              <input
-                type="radio"
-                name="course"
-                style="font-size: larger"
-                required
-              />MECHANICAL ENGINEERING<br />
-              <input
-                type="radio"
-                name="course"
-                style="font-size: larger"
-                required
-              />ELECTRICAL ENGINEERING
-            </td>
-          </tr>
-          <tr class="row">
-            <td class="defi"><label class="label">ENTER COURSE : </label></td>
-            <td class="defi">
-              <input
-                type="radio"
-                name="type"
-                style="font-size: larger"
-                required
-              />B.E<br />
-              <input
-                type="radio"
-                name="type"
-                style="font-size: larger"
-                required
-              />B.TECH<br />
-            </td>
-          </tr>
+            <tr class="row">
+              <td class="defi"><label class="label">ENTER E-MAIL : </label></td>
+              <td class="defi">
+                <input
+                  type="email"
+                  class="input"
+                  placeholder="enter email"
+                  required
+                />
+              </td>
+            </tr>
+            <tr>
+              <td class="defi">
+                <label class="label">ENTER DEPARTMENT : </label>
+              </td>
+              <td class="defi">
+                <input
+                  type="radio"
+                  name="course"
+                  style="font-size: larger"
+                  required
+                />COMPUTER SCIENCE ENGINEERING<br />
+                <input
+                  type="radio"
+                  name="course"
+                  style="font-size: larger"
+                  required
+                />MECHANICAL ENGINEERING<br />
+                <input
+                  type="radio"
+                  name="course"
+                  style="font-size: larger"
+                  required
+                />ELECTRICAL ENGINEERING
+              </td>
+            </tr>
+            <tr class="row">
+              <td class="defi"><label class="label">ENTER COURSE : </label></td>
+              <td class="defi">
+                <input
+                  type="radio"
+                  name="type"
+                  style="font-size: larger"
+                  required
+                />B.E<br />
+                <input
+                  type="radio"
+                  name="type"
+                  style="font-size: larger"
+                  required
+                />B.TECH<br />
+              </td>
+            </tr>
 
-          <tr class="row">
-            <td class="defi">
-              <label class="label">ENTER STUDENT PHONE-NUMBER : </label>
-            </td>
-            <td class="defi">
-              <input type="number" style="font-size: larger" required />
-            </td>
-          </tr>
+            <tr class="row">
+              <td class="defi">
+                <label class="label">ENTER STUDENT PHONE-NUMBER : </label>
+              </td>
+              <td class="defi">
+                <input
+                  type="number"
+                  class="input"
+                  placeholder="enter phone"
+                  required
+                />
+              </td>
+            </tr>
 
-          <tr class="row">
-            <td class="defi">
-              <label class="label">ENTER PARENT PHONE-NUMBER : </label>
-            </td>
-            <td class="defi">
-              <input type="number" style="font-size: larger" required />
-            </td>
-          </tr>
+            <tr class="row">
+              <td class="defi">
+                <label class="label">ENTER PARENT PHONE-NUMBER : </label>
+              </td>
+              <td class="defi">
+                <input
+                  type="number"
+                  class="input"
+                  placeholder="enter number"
+                  required
+                />
+              </td>
+            </tr>
 
-          <tr class="row">
-            <td class="defi">
-              <label class="label">ENTER ADDRESS : </label>
-            </td>
-            <td class="defi">
-              <textarea row="4" cols="40" style="font-size: larger"></textarea>
-            </td>
-          </tr>
-        </table>
+            <tr class="row">
+              <td class="defi">
+                <label class="label">ENTER ADDRESS : </label>
+              </td>
+              <td class="defi">
+                <textarea
+                  row="4"
+                  cols="40"
+                  class="input"
+                  placeholder="enter address"
+                ></textarea>
+              </td>
+            </tr>
+          </table>
+        </div>
 
         <div class="but">
-          <button id="button">SUBMIT</button>
+          <button type="submit" id="button">SUBMIT</button>
         </div>
       </fieldset>
     </form>
+
+    <script>
+      let form = document.getElementById("form");
+      form.addEventListener("submit", function (e) {
+        e.preventDefault();
+        let rolln = document.querySelector("#roll").value;
+        let roll = Number(rolln);
+        if (roll <= 100) {
+          alert("ENTER AN VALID ROLL NUMBER!!");
+          return;
+        }
+
+        alert("FORM SUBMITTED SUCCESSFULLY");
+      });
+    </script>
   </body>
 </html>

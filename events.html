@@ -1,0 +1,20 @@
+<!doctype html>
+<html>
+  <head>
+    <title>EVENTS IN HTML</title>
+  </head>
+  <body>
+    <button id="btn" type="button">CLICK ME</button>
+    <p id="para">THIS IS A PARAGRAPH</p>
+    <script>
+      let button = document.getElementById("btn");
+      let para = document.getElementById("para");
+      button.addEventListener("click", () => {
+        button.innerText = "button changed";
+        para.innerHTML += "<br>";
+        para.innerText += "new line added";
+        para.innerHTML += "<br><b>new line added</b>";
+      });
+    </script>
+  </body>
+</html>
