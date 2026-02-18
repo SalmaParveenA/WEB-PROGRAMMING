@@ -1,93 +1,113 @@
-<!doctype html>
+<!DOCTYPE html>
 <html>
-  <head>
-    <title>HTML Tags Example</title>
-  </head>
+<head>
+  <title>Student Registration</title>
+  <style>
+    body {
+      font-family: Arial;
+      background-color: #f2f2f2;
+    }
 
-  <body>
-    <!-- Block-level tags -->
-    <h1>HTML Basic Tags Demo</h1>
-    <p>This page demonstrates images, tables, and text formatting.</p>
+    .container {
+      width: 300px;
+      margin: 50px auto;
+      padding: 20px;
+      background: white;
+      border-radius: 8px;
+      box-shadow: 0 0 10px gray;
+    }
 
-    <hr />
+    button:hover {
+      background-color: green;
+      color: white;
+    }
 
-    <!-- Image -->
-    <h2>Image Example</h2>
-    <img src="image.jpg" alt="Sample Image" />
+    #box {
+      border: 1px solid black;
+      padding: 10px;
+      margin-top: 10px;
+    }
 
-    <hr />
+    .item {
+      color: red;
+    }
 
-    <!-- Physical text formatting tags -->
-    <h2>Physical Text Formatting</h2>
-    <p>
-      <b>Bold text</b><br />
-      <i>Italic text</i><br />
-      <u>Underlined text</u><br />
-      <big>Big text</big><br />
-      <small>Small text</small>
-    </p>
+    .center {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+  </style>
+</head>
+<body>
 
-    <hr />
+<div class="container">
 
-    <!-- Logical text formatting tags -->
-    <h2>Logical Text Formatting</h2>
-    <p>
-      <strong>Strong text</strong><br />
-      <em>Emphasized text</em><br />
-      <mark>Highlighted text</mark><br />
-      <del>Deleted text</del><br />
-      <ins>Inserted text</ins>
-    </p>
+  <h2 class="item">Registration Form</h2>
 
-    <hr />
+  <form id="myForm">
+    
+    <!-- Required Text Field -->
+    <input type="text" id="name" name="username" placeholder="Enter Name" required><br><br>
 
-    <!-- Inline and block-level tags -->
-    <h2>Inline and Block-Level Tags</h2>
+    <!-- Email Format -->
+    <input type="email" name="email" placeholder="Enter Email" required><br><br>
 
-    <!-- Block-level -->
-    <div>
-      <p>This is a block-level paragraph.</p>
-      <p>Another block-level paragraph.</p>
-    </div>
+    <!-- Number between 1 and 10 -->
+    <input type="number" min="1" max="10" placeholder="Rate 1-10"><br><br>
 
-    <!-- Inline -->
-    <p>
-      This is <span style="color: red">inline text</span> inside a paragraph,
-      and this is a <a href="#">link</a>.
-    </p>
+    <!-- Radio Default Selected -->
+    <input type="radio" name="gender" checked> Male
+    <input type="radio" name="gender"> Female<br><br>
 
-    <hr />
+    <!-- Required Checkbox -->
+    <input type="checkbox" required> I Agree<br><br>
 
-    <!-- Table -->
-    <h2>Table Example</h2>
-    <table border="1" cellpadding="10">
-      <tr>
-        <th>Name</th>
-        <th>Course</th>
-        <th>Age</th>
-      </tr>
-      <tr>
-        <td>Alice</td>
-        <td>HTML</td>
-        <td>20</td>
-      </tr>
-      <tr>
-        <td>Bob</td>
-        <td>CSS</td>
-        <td>22</td>
-      </tr>
-    </table>
+    <!-- Progress Bar -->
+    <progress value="50" max="100"></progress><br><br>
 
-    <hr />
+    <!-- Button -->
+    <button type="submit" id="btn">Submit</button>
 
-    <!-- List -->
-    <h2>List Example</h2>
-    <ul>
-      <li>HTML</li>
-      <li>CSS</li>
-      <li>JavaScript</li>
-    </ul>
+  </form>
 
-    <p>© 2026 HTML Learning Page</p>
-  </body>
+  <!-- Output Box -->
+  <div id="box">
+    <p id="demo"></p>
+  </div><br>
+   <a href="registration.html" target="_blank">For More Visit</a>
+</div>
+
+<script>
+  // Prevent form submission
+  document.getElementById("myForm").addEventListener("submit", function(event) {
+    event.preventDefault();
+
+    // Get name value
+    var name = document.getElementById("name").value;
+
+    // Display entered name
+    document.getElementById("demo").innerHTML = "Hello " + name;
+
+    // Change button text
+    document.getElementById("btn").innerHTML = "Submitted";
+
+    // Print current date
+    console.log(new Date());
+
+    // Check number example
+    var num = 15;
+    if(num > 10) {
+      console.log("Greater");
+    }
+
+    // Add two numbers
+    var a = 5;
+    var b = 10;
+    var sum = a + b;
+    console.log(sum);
+  });
+</script>
+
+</body>
 </html>
